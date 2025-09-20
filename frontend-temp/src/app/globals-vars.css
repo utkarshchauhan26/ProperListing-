@@ -1,0 +1,91 @@
+/* Global CSS Variables */
+:root {
+  /* Spacing Scale (4px base unit system) */
+  --space-1: 4px;   /* 4px */
+  --space-2: 8px;   /* 8px */
+  --space-3: 12px;  /* 12px */
+  --space-4: 16px;  /* 16px */
+  --space-5: 20px;  /* 20px */
+  --space-6: 24px;  /* 24px */
+  --space-8: 32px;  /* 32px */
+  --space-10: 40px; /* 40px */
+  --space-12: 48px; /* 48px */
+  --space-16: 64px; /* 64px */
+  --space-20: 80px; /* 80px */
+  --space-24: 96px; /* 96px */
+
+  /* Mobile-First Breakpoints */
+  --mobile: 320px;
+  --mobile-lg: 480px;
+  --tablet: 768px;
+  --desktop: 1024px;
+  --desktop-lg: 1280px;
+
+  /* Bento Grid System */
+  --bento-gap-sm: var(--space-3);  /* 12px mobile */
+  --bento-gap-md: var(--space-4);  /* 16px tablet */
+  --bento-gap-lg: var(--space-6);  /* 24px desktop */
+  --bento-radius: 12px;
+  --bento-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  --bento-shadow-hover: 0 8px 24px rgba(0,0,0,0.15);
+
+  /* Typography Scale */
+  --text-xs: 12px;   /* Small text */
+  --text-sm: 14px;   /* Body text */
+  --text-base: 16px; /* Default */
+  --text-lg: 18px;   /* Subheadings */
+  --text-xl: 24px;   /* Headings */
+  --text-2xl: 32px;  /* Large headings */
+  --text-3xl: 48px;  /* Hero titles */
+
+  /* Layout Constants */
+  --navbar-height: 72px;
+  --container-max-width: 1200px;
+  --sidebar-width: 280px;
+
+  /* Color System */
+  --primary: #FF497C;
+  --primary-dark: #E63946;
+  --secondary: #4F46E5;
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --error: #EF4444;
+
+  /* Gray Scale */
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DB;
+  --gray-400: #9CA3AF;
+  --gray-500: #6B7280;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+
+  /* Semantic Colors */
+  --card-bg: white;
+  --card-border: var(--gray-200);
+  --text-primary: var(--gray-900);
+  --text-secondary: var(--gray-600);
+  --text-muted: var(--gray-500);
+}
+
+/* Global reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* Base font size */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--gray-50);
+}

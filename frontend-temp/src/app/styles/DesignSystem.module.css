@@ -1,0 +1,168 @@
+/* Design System Foundation - CSS Modules Components */
+
+/* Container System */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--space-8);
+  }
+}
+
+/* Mobile-First Responsive Grid */
+.gridContainer {
+  display: grid;
+  gap: var(--bento-gap-sm);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .gridContainer {
+    gap: var(--bento-gap-md);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridContainer {
+    gap: var(--bento-gap-lg);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Bento Grid System */
+.bentoContainer {
+  display: grid;
+  gap: var(--bento-gap-sm);
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .bentoContainer {
+    gap: var(--bento-gap-md);
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.bentoCard {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--bento-radius);
+  padding: var(--space-6);
+  box-shadow: var(--bento-shadow);
+  transition: all 0.2s ease-in-out;
+}
+
+.bentoCard:hover {
+  box-shadow: var(--bento-shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Typography Classes */
+.textXs { font-size: var(--text-xs); }
+.textSm { font-size: var(--text-sm); }
+.textBase { font-size: var(--text-base); }
+.textLg { font-size: var(--text-lg); }
+.textXl { font-size: var(--text-xl); }
+.text2xl { font-size: var(--text-2xl); }
+.text3xl { font-size: var(--text-3xl); }
+
+.textPrimary { color: var(--text-primary); }
+.textSecondary { color: var(--text-secondary); }
+.textMuted { color: var(--text-muted); }
+
+/* Spacing Utilities */
+.spaceY1 > * + * { margin-top: var(--space-1); }
+.spaceY2 > * + * { margin-top: var(--space-2); }
+.spaceY3 > * + * { margin-top: var(--space-3); }
+.spaceY4 > * + * { margin-top: var(--space-4); }
+.spaceY6 > * + * { margin-top: var(--space-6); }
+.spaceY8 > * + * { margin-top: var(--space-8); }
+
+/* Button Base Styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border: none;
+  border-radius: 8px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.buttonPrimary {
+  background: var(--primary);
+  color: white;
+}
+
+.buttonPrimary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.buttonSecondary {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.buttonSecondary:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Responsive Utilities */
+.hiddenMobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hiddenMobile { display: block; }
+  .hiddenDesktop { display: none; }
+}
+
+/* Flexbox Utilities */
+.flex { display: flex; }
+.flexCol { flex-direction: column; }
+.flexRow { flex-direction: row; }
+.itemsCenter { align-items: center; }
+.justifyCenter { justify-content: center; }
+.justifyBetween { justify-content: space-between; }
+.gap2 { gap: var(--space-2); }
+.gap4 { gap: var(--space-4); }
+.gap6 { gap: var(--space-6); }
+
+/* Card System */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: var(--space-6);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cardHover {
+  transition: all 0.2s ease-in-out;
+}
+
+.cardHover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
